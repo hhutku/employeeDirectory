@@ -1,4 +1,4 @@
-import React, {useState,useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import useAPI from '../../utils/useAPI'
 import Search from '../Search'
 import Jumbo from '../Jumbo'
@@ -17,7 +17,7 @@ const Main = () => {
     useEffect(() => {
         const filteredEmployees = result.filter(employee => employee.name.last
             .toLowerCase().indexOf(search.toLowerCase()) !== -1)
-               setFilteredResult(filteredEmployees)
+        setFilteredResult(filteredEmployees)
 
     }, [search, result])
 
@@ -35,16 +35,15 @@ const Main = () => {
             setSorted(false);
         }
     }
-  
+
 
     return (
         <div>
             <ButtonContext.Provider value={handleSortByName}>
-            <Jumbo />
-            <Search setSearch={setSearch} />
-       <h1>{search}</h1>
-       <Table result={filteredResult.length > 0 ? filteredResult : result} />
-           </ButtonContext.Provider>
+                <Jumbo />
+                <Search setSearch={setSearch} />
+                <Table result={filteredResult.length > 0 ? filteredResult : result} />
+            </ButtonContext.Provider>
         </div>
     )
 }
