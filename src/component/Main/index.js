@@ -21,9 +21,7 @@ const Main = () => {
 
     }, [search, result])
 
-    console.log(result)
-    console.log(filteredResult)
-    console.log(sorted)
+
 
     const handleSortByName = () => {
 
@@ -41,9 +39,9 @@ const Main = () => {
         <div>
             <ButtonContext.Provider value={handleSortByName}>
                 <Jumbo />
-                <Search setSearch={setSearch} />
-                <Table result={filteredResult.length > 0 ? filteredResult : result} />
-            </ButtonContext.Provider>
+               <Search setSearch={setSearch} />
+                <Table result={ search  ? filteredResult : result} />
+                </ButtonContext.Provider>
         </div>
     )
 }

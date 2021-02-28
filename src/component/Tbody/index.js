@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Tbody = ({ result }) => {
+const Tbody = ({ result}) => {
     return (
         <tbody>
             {result ? result.map(result => (

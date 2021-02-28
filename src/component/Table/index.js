@@ -18,7 +18,7 @@ const Table = ({result}) => {
                </tr>
                 </thead>
 
-               <Tbody result={result}/>
+               <Tbody result={result} />
             </table>
         </div>
     );
