@@ -3,6 +3,7 @@ import useAPI from '../../utils/useAPI'
 import Search from '../Search'
 import Jumbo from '../Jumbo'
 import ButtonContext from '../../utils/ButtonContext'
+import Tbody from '../Tbody'
 
 const Main = () => {
 
@@ -42,6 +43,7 @@ const Main = () => {
             <Jumbo />
             <Search setSearch={setSearch} />
        <h1>{search}</h1>
+       <Tbody  result={filteredResult.length > 0 ? filteredResult : result}/>
            </ButtonContext.Provider>
         </div>
     )
