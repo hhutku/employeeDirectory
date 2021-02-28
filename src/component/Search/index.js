@@ -1,8 +1,8 @@
-import React from "react";
-
+import React,{useContext} from "react";
+import ButtonContext from '../../utils/ButtonContext'
 
 const Search = ({setSearch}) => {
-   
+    const  handleSortByName  = useContext(ButtonContext);
     
     return (
 
@@ -15,7 +15,8 @@ const Search = ({setSearch}) => {
                    
                     onChange={(e)=>setSearch(e.target.value)}
                 />
-          
+             <button  className="btn btn-secondary " 
+                  onClick={handleSortByName} >Sort by Name</button>
                
             </div>
         </div>
